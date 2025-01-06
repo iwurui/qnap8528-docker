@@ -25,6 +25,9 @@
  *	v1.1: Added config  TS464, TS-464C, TS-464C2, TS-464T4 and TS-464U
  *	v1.2: Extended delay and retry for EC read/write operations
  *	      Fixed erroneous check for slot activity support when setting ERROR off
+ *  v1.3: Changed VPD entries to return an error if BP does not exist
+ *		  Changed configuration search logic to support devices with MB code only
+ *		  Added configuration for TS-464eU
  */
 
 #include <linux/delay.h>
@@ -426,10 +429,16 @@ static ssize_t qnap8528_vpd_attr_show(struct device *dev, struct qnap8528_device
 	u16 i, reg_a, reg_b, reg_c, offs;
 	char raw[QNAP8528_VPD_ENTRY_MAX + 1] = {0};
 	u32 entry = attr->vpd_entry;
-	struct qnap8528_dev_data *data;
-
-	if (dev && (entry == 0xdeadbeef)) {
+	struct qnap8528_dev_data *data = NULL;
+	
+	if (dev)
 		data = dev_get_drvdata(dev);
+
+	if (data && (((entry >> 0x1a) & 3) == 1))
+		if (!data->config->features.vpd_bp_table)
+			return -ENOTSUPP;
+
+	if (data && (entry == 0xdeadbeef)) {
 		if (data->config->features.enc_serial_mb)
 			entry = QNAP8528_VPD_ENC_SER_MB;
 		else
@@ -1112,25 +1121,39 @@ static int qnap8528_register_hwmon(struct device *dev)
 static struct qnap8528_config *qnap8528_find_config(void)
 {
 	int i;
+	size_t bp_s_size;
 	char mb_model[QNAP8528_VPD_ENTRY_MAX + 1];
 	char bp_model[QNAP8528_VPD_ENTRY_MAX + 1];
 
 	qnap8528_vpd_attr_show(NULL, &(struct qnap8528_device_attribute){.vpd_entry = QNAP8528_VPD_MB_MODEL}, mb_model);
+	// CR: Should we really be doing this if there is no backplane table?
 	qnap8528_vpd_attr_show(NULL, &(struct qnap8528_device_attribute){.vpd_entry = QNAP8528_VPD_BP_MODEL}, bp_model);
 
-	if (!strnlen(mb_model, 32) || !strnlen(bp_model, 32))
+	if (!strnlen(mb_model, 32))
 		return 0;
+	bp_s_size = strnlen(bp_model, 32);
 
-	pr_info("Searching configs for a match with MB=%s BP=%s", mb_model, bp_model);
+	pr_info("Searching configs for a match with MB=%s", mb_model);
 
-	for (i = 0; qnap8528_configs[i].mb_model && qnap8528_configs[i].bp_model; i++) {
-		if (!strnlen(qnap8528_configs[i].mb_model, 32) || !strnlen(qnap8528_configs[i].bp_model, 32))
+	//  && qnap8528_configs[i].bp_model
+	for (i = 0; qnap8528_configs[i].mb_model; i++) {
+		//  || 
+		if (!strnlen(qnap8528_configs[i].mb_model, 32))
 			continue;
 
-		if (strstr(mb_model, qnap8528_configs[i].mb_model) && strstr(bp_model, qnap8528_configs[i].bp_model)) {
-			pr_info("Model codes match found, model is %s", qnap8528_configs[i].name);
-			/* CR: Add here sanity check for features */
-			return &qnap8528_configs[i];
+		// &&
+		if (strstr(mb_model, qnap8528_configs[i].mb_model)) {
+			pr_info("Model MB code match found");
+			if (strnlen(qnap8528_configs[i].bp_model, 32)) {
+				pr_info("Model config requires BP match too"); 
+				if (bp_s_size && strstr(bp_model, qnap8528_configs[i].bp_model)) {
+					pr_info("Model BP code match found, device model is %s", qnap8528_configs[i].name);
+					return &qnap8528_configs[i];
+				}
+			} else {
+				pr_info("Device model is %s", qnap8528_configs[i].name);
+				return &qnap8528_configs[i];
+			}
 		}
 	}
 	pr_err("Could not find configuration for device, please report this issue");
@@ -1221,7 +1244,7 @@ qnap8528_init_ret:
 
 MODULE_AUTHOR("0xGiddi <qnap8528@giddi.net>");
 MODULE_DESCRIPTION("QNAP IT8528 EC driver");
-MODULE_VERSION("1.2");
+MODULE_VERSION("1.3");
 MODULE_LICENSE("GPL");
 
 module_init(qnap8528_init);

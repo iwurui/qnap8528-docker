@@ -144,6 +144,7 @@ struct qnap8528_features {
 	u32 led_jbod:1;
 	u32 led_ident:1;
 	u32 enc_serial_mb:1;
+	u32 vpd_bp_table:1;
 };
 
 /*
@@ -272,6 +273,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 5, 6, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -309,6 +311,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 5, 6, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -348,6 +351,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -383,6 +387,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_10g        = 1,
 			.led_jbod       = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -402,6 +407,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_10g        = 1,
 			.led_jbod       = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -421,6 +427,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -444,6 +451,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -467,6 +475,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 5, 4, 2, 1, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -490,6 +499,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -515,6 +525,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -541,6 +552,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -566,6 +578,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 6, 1, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -595,6 +608,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_usb        = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -622,6 +636,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -653,6 +668,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -683,6 +699,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -712,6 +729,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 6, 1, 2, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -743,6 +761,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -779,6 +798,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_10g        = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -810,6 +830,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -842,6 +863,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_10g        = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -874,6 +896,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_10g        = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -910,6 +933,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -947,6 +971,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 6, 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -985,6 +1010,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_10g        = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1024,6 +1050,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 3, 4, 21, 22, 31, 32, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1066,6 +1093,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_10g        = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1110,6 +1138,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_10g        = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1155,6 +1184,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1176,6 +1206,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1199,6 +1230,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1222,6 +1254,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 8, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1244,6 +1277,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1267,6 +1301,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1292,6 +1327,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1315,6 +1351,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1336,6 +1373,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1357,6 +1395,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1378,6 +1417,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1400,6 +1440,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1421,6 +1462,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 6, 1, 4, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1444,6 +1486,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 8, 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1469,6 +1512,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1492,6 +1536,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1513,6 +1558,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.pwr_recovery   = 1,
 			.led_status     = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 6, 3, 2, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1535,6 +1581,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 3, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1562,6 +1609,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1589,6 +1637,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 3, 2, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1620,6 +1669,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1652,6 +1702,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1672,6 +1723,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1691,6 +1743,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1711,6 +1764,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1733,6 +1787,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1755,6 +1810,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1776,6 +1832,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1799,6 +1856,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1821,6 +1879,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1845,6 +1904,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1869,6 +1929,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 8, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1892,6 +1953,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1915,6 +1977,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_jbod       = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 3, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1936,6 +1999,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1957,6 +2021,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -1978,6 +2043,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -2001,6 +2067,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_status     = 1,
 			.led_usb        = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 7, 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -2023,6 +2090,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_brightness = 1,
 			.led_status     = 1,
 			.led_usb        = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -2039,6 +2107,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_brightness = 1,
 			.led_status     = 1,
 			.led_usb        = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -2057,6 +2126,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_brightness = 1,
 			.led_status     = 1,
 			.led_usb        = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -2075,6 +2145,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.led_brightness = 1,
 			.led_status     = 1,
 			.led_usb        = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -2093,6 +2164,7 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.eup_mode       = 1,
 			.led_status     = 1,
 			.led_ident      = 1,
+			.vpd_bp_table	= 1,
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
@@ -2103,5 +2175,90 @@ static struct qnap8528_config qnap8528_configs[] = {
 			{ NULL }
 		}
 	},
+
+
+    {
+        "TS-1264U", "Q08R0", "Q08X0",
+        {
+            .eup_mode       = 1,
+            .led_status     = 1,
+            .led_jbod       = 1,
+            .led_ident      = 1,
+            .vpd_bp_table   = 1,
+        },
+        .fans = (u8[]){ 1, 2, 0},
+        .slots = (struct qnap8528_slot_config[]){
+                        { .name = "hdd1", .ec_index = 1, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd2", .ec_index = 2, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd3", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd4", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd5", .ec_index = 5, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd6", .ec_index = 6, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd7", .ec_index = 7, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd8", .ec_index = 8, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd9", .ec_index = 9, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd10", .ec_index = 10, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd11", .ec_index = 11, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd12", .ec_index = 12, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+            { NULL }
+        }
+    },
+    {
+        "TS-464U", "Q08S0", "QY740",
+        {
+            .eup_mode       = 1,
+            .led_status     = 1,
+            .led_ident      = 1,
+            .vpd_bp_table   = 1,
+        },
+        .fans = (u8[]){ 1, 2, 0},
+        .slots = (struct qnap8528_slot_config[]){
+                        { .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd3", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd4", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+            { NULL }
+        }
+    },
+    {
+        "TS-864EU", "Q0AN0", "Q0AS0",
+        {
+            .led_status     = 1,
+            .led_jbod       = 1,
+            .led_ident      = 1,
+            .vpd_bp_table   = 1,
+        },
+        .fans = (u8[]){ 1, 2, 3, 0},
+        .slots = (struct qnap8528_slot_config[]){
+                        { .name = "", .ec_index = 1, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "", .ec_index = 2, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "", .ec_index = 5, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "", .ec_index = 6, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "", .ec_index = 7, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "", .ec_index = 8, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+            { NULL }
+        }
+    },
+	{
+        "TS-464EU", "Q0930", "",
+        {
+            .eup_mode       = 1,
+            .led_status     = 1,
+            .led_jbod       = 1,
+            .vpd_bp_table   = 1,
+        },
+        .fans = (u8[]){ 1, 2, 3, 0},
+        .slots = (struct qnap8528_slot_config[]){
+                        { .name = "m2ssd1", .ec_index = 5, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+                        { .name = "m2ssd2", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd1", .ec_index = 1, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd2", .ec_index = 2, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+                        { .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+            { NULL }
+        }
+    },
 	{ NULL }
 };
