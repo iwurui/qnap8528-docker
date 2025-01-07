@@ -291,7 +291,7 @@ or does not use the IT8528 chip. Please check the Q&A for more information.
 |TVS-1288X|Q05W0|Q05K0|14/14 |
 |TS-3088XU|Q06X0|Q06Y0|30/30 |
 |TS-973AX|Q0711|Q0760|9/9 |
-|TS-873A|Q07D0|Q07L0|10/10 |🟩 Similar to TS-473A
+|TS-873A|Q07D0|Q07L0|10/10 |✅ Tested
 |TS-673A|Q07D0|Q07M0|8/8 |🟩 Similar to TS-473A
 |TS-473A|Q07D0|Q07N0|6/6 |  ✅ Tested
 |TS-1655|Q07Z1|Q08G0|18/18 |
@@ -323,7 +323,7 @@ or does not use the IT8528 chip. Please check the Q&A for more information.
 |TVS-875U|SAP00|SBO60|8/10 | ⚠️ See *1
 |TVS-1275U|SAP00|SBO70|12/14 | ⚠️ See *1
 |TVS-1675U|SAP00|SBO80|16/18 | ⚠️ See *1
-|TS-464|Q07R1|Q08F0|4/6 |Requires `skip_hw_check` ⚠️ See *1 See *2 
+|TS-464|Q07R1|Q08F0|4/6 |✅ Tested - Requires `skip_hw_check` ⚠️ See *1 See *2 
 |TS-464U|Q08S0|QY740|4/4 |Might require `skip_hw_check` ⚠️ See *2
 |TS-464T4|Q0910|Q08F0|6/6 |Might require `skip_hw_check` ⚠️ See *2
 |TS-464C|SAQ93|SBR00|6/6 |Might require `skip_hw_check` ⚠️ See *2
