@@ -213,7 +213,7 @@ Following is a list of supported leds (without the `qnap8528::` prefix):
 |Status|`status`|`0`,`1`,`2` for Off, On Green, On Red| Support blink, see note below
 |USB|`usb`|`0`,`1` for Off, On (Blue)| Support blink
 |Enclosure Identification|`ident`|`0`,`1` for Off, On (Flashing Green/Red) | Overrides all disk LEDs until disabled
-|JBOD Expansion|`jbod`|`0`,`1` for Off, On (Orange?)|
+|JBOD Expansion|`jbod`|`0`,`1` for Off, On (Orange?/Blue)|
 |10GbE Expansion|`10GbE`|`0`,`1` for Off, On (Green?)|
 |Panel Brightness|`panel_brightness`|`0`-`100` for Off, Max Brightness| Affects all LEDs
 
@@ -291,9 +291,9 @@ or does not use the IT8528 chip. Please check the Q&A for more information.
 |TVS-1288X|Q05W0|Q05K0|14/14 |
 |TS-3088XU|Q06X0|Q06Y0|30/30 |
 |TS-973AX|Q0711|Q0760|9/9 |
-|TS-873A|Q07D0|Q07L0|10/10 |✅ Tested
+|TS-873A|Q07D0|Q07L0|10/10 |✅ Tested, Thank you @calypso
 |TS-673A|Q07D0|Q07M0|8/8 |🟩 Similar to TS-473A
-|TS-473A|Q07D0|Q07N0|6/6 |  ✅ Tested
+|TS-473A|Q07D0|Q07N0|6/6 |  ✅ Tested, by me. 
 |TS-1655|Q07Z1|Q08G0|18/18 |
 |TS-2287XU|Q0840|Q08A0|22/22 |
 |TS-1887XU|Q0840|Q0950|18/18 |
@@ -323,14 +323,14 @@ or does not use the IT8528 chip. Please check the Q&A for more information.
 |TVS-875U|SAP00|SBO60|8/10 | ⚠️ See *1
 |TVS-1275U|SAP00|SBO70|12/14 | ⚠️ See *1
 |TVS-1675U|SAP00|SBO80|16/18 | ⚠️ See *1
-|TS-464|Q07R1|Q08F0|4/6 |✅ Tested - Requires `skip_hw_check` ⚠️ See *1 See *2 
+|TS-464|Q07R1|Q08F0|4/6 |✅ Tested, thank you @adyanth; Requires `skip_hw_check` ⚠️ See *1 See *2 
 |TS-464U|Q08S0|QY740|4/4 |Might require `skip_hw_check` ⚠️ See *2
 |TS-464T4|Q0910|Q08F0|6/6 |Might require `skip_hw_check` ⚠️ See *2
 |TS-464C|SAQ93|SBR00|6/6 |Might require `skip_hw_check` ⚠️ See *2
 |TS-464C2|SAQ95|SBR00|6/6 |Might require `skip_hw_check` ⚠️ See *2
 TS-1264U|Q08R0|Q08X0|12/12 | ⚠️ See *2
 |TS-464U|Q08S0|QY740|4/4 | ⚠️ See *2
-|TS-464EU|Q0930|*N/A*|6/6 | Requires `skip_hw_check` ⚠️ See *2
+|TS-464EU|Q0930|*N/A*|6/6 |✅ Tested, thank you @L3nny5; Requires `skip_hw_check` ⚠️ See *2
 |TS-864EU|Q0AN0|Q0AS0|8/8 | ⚠️ See *2
 
 *1 Some or all disks LEDs are managed by other hardware (not the EC), if the model is missing 2 disks (e.g `8/10`), it's most likely the internal M.2/NVME ports that do not have an LED associated with them.\
