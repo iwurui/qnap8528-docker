@@ -330,7 +330,7 @@ or does not use the IT8528 chip. Please check the Q&A for more information.
 |TS-464C2|SAQ95|SBR00|6/6 |Might require `skip_hw_check` ⚠️ See *2
 TS-1264U|Q08R0|Q08X0|12/12 | ⚠️ See *2
 |TS-464U|Q08S0|QY740|4/4 | ⚠️ See *2
-|TS-464EU|Q0930|*N/A*|6/6 | ⚠️ See *2
+|TS-464EU|Q0930|*N/A*|6/6 | Requires `skip_hw_check` ⚠️ See *2
 |TS-864EU|Q0AN0|Q0AS0|8/8 | ⚠️ See *2
 
 *1 Some or all disks LEDs are managed by other hardware (not the EC), if the model is missing 2 disks (e.g `8/10`), it's most likely the internal M.2/NVME ports that do not have an LED associated with them.\
