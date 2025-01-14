@@ -30,14 +30,17 @@ The qnap8528 project is a kernel module for exposing the ITE8528 embedded contro
 ✅ Reading EC firmware version and CPLD version\
 ✅ Changing AC power recovery mode\
 ✅ Changing EuP mode\
-✅ Fan reporting and control via hwmon\
-✅ Temperature reporting via hwmon\
+✅ Fan reporting and control via hwmon (see note)\
+✅ Temperature reporting via hwmon (see note)\
 ✅ Copy/Reset/Chassis button inputs\
 ✅ System LED control (e.g. *status*, *usb*, *ident*, *jbod*)\
-✅ Disk slot LED control\
+✅ Disk slot LED control  (see note)\
 ✅ Reading VPD entries (e.g device serial no.)
 
 Sounds amazing right? below are instruction to install and use this module for yourself! If you install this module, please be kind and run a few tests to verify that all the features are working properly and report back either by creating a new issue or emailing me at `qnap8528 [AT] giddi.net`.
+
+**Note**: QM2/expansion card are not supported currently, I do not have the hardware to test and develop,\
+contributions and research comments are welcome (issue: https://github.com/0xGiddi/qnap8528/issues/6)
 
 ## Installation Instructions
 Before installing, please check the *Supported Models* table and see that your device is supported by this module, if your device is not yet supported, please check seethe Q&A for more information. The following instructions have been tested on *Debian 12 x64*.
