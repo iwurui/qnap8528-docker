@@ -341,7 +341,7 @@ TS-1264U|Q08R0|Q08X0|12/12 | ⚠️ See *2
 |TBS-453DX|QZ530|*N/A*|4/4 | ⚠️ See 2 
 |HS-453DX|QZ290|*N/A*|4/4 | ⚠️ See 2 
 |TS-ALTO4|Q05X0|Q06A0|2/2 |  
-|TS-253D|Q05H0|QY570|2/2 |  
+|TS-253D|Q05H0|QY570|2/2 |  ✅ Tested, thank you @Atomique13,@nader-eloshaiker; Requires `skip_hw_check`
 |TS-251D|Q04W1|QY570|2/2 |  
 |TS-653D|Q04O0|Q04N0|6/6 |  
 |TS-453D|Q04M0|QY581|4/4 | ⚠️ See 2
