@@ -30,14 +30,17 @@ The qnap8528 project is a kernel module for exposing the ITE8528 embedded contro
 ✅ Reading EC firmware version and CPLD version\
 ✅ Changing AC power recovery mode\
 ✅ Changing EuP mode\
-✅ Fan reporting and control via hwmon\
-✅ Temperature reporting via hwmon\
+✅ Fan reporting and control via hwmon (see note)\
+✅ Temperature reporting via hwmon (see note)\
 ✅ Copy/Reset/Chassis button inputs\
 ✅ System LED control (e.g. *status*, *usb*, *ident*, *jbod*)\
-✅ Disk slot LED control\
+✅ Disk slot LED control  (see note)\
 ✅ Reading VPD entries (e.g device serial no.)
 
 Sounds amazing right? below are instruction to install and use this module for yourself! If you install this module, please be kind and run a few tests to verify that all the features are working properly and report back either by creating a new issue or emailing me at `qnap8528 [AT] giddi.net`.
+
+**Note**: QM2/expansion card are not supported currently (it seems that most of them are not controlled by the EC anyway), \
+Waiting on hardware for testing, contributions and research comments are welcome (issue: https://github.com/0xGiddi/qnap8528/issues/6)
 
 ## Installation Instructions
 Before installing, please check the *Supported Models* table and see that your device is supported by this module, if your device is not yet supported, please check seethe Q&A for more information. The following instructions have been tested on *Debian 12 x64*.
@@ -45,7 +48,7 @@ Before installing, please check the *Supported Models* table and see that your d
 **Disclaimer:** This kernel module is provided as-is, without any warranty of functionality or fitness for a specific purpose. The developers of this kernel module accept no liability for any damage, data loss, or system instability resulting from its use, Use at your own risk .
 ### Install instructions using DKMS
 
-> **_⚠️ TR-464 Users:_**  It seems the device uses an ENE EC which does not return the correct chip ID, `skip_hw_check` needs to be set to true (`insmod qnap8528.ko skip_hw_check=true`), also, add this at the end of `ExecStart` in the service unit file.
+> **_⚠️ TR-464/TR-464xx/TS-253D Users:_**  It seems the device uses an ENE EC which does not return the correct chip ID, `skip_hw_check` needs to be set to true (`insmod qnap8528.ko skip_hw_check=true`), also, add this at the end of `ExecStart` in the service unit file.
 
 1. Download the latest release of the module from the [releases page](https://github.com/0xGiddi/tsx73a-ec/releases/latest) or clone the repository locally using `git clone https://github.com/0xgiddi/qnap8528.git`
 2. Extract the zip/tarball using `unzip <file>`, `tar xzf <file>`
@@ -340,7 +343,7 @@ TS-1264U|Q08R0|Q08X0|12/12 | ⚠️ See *2
 |TBS-453DX|QZ530|*N/A*|4/4 | ⚠️ See 2 
 |HS-453DX|QZ290|*N/A*|4/4 | ⚠️ See 2 
 |TS-ALTO4|Q05X0|Q06A0|2/2 |  
-|TS-253D|Q05H0|QY570|2/2 |  
+|TS-253D|Q05H0|QY570|2/2 |  ✅ Tested, thank you @Atomique13,@nader-eloshaiker; Requires `skip_hw_check`
 |TS-251D|Q04W1|QY570|2/2 |  
 |TS-653D|Q04O0|Q04N0|6/6 |  
 |TS-453D|Q04M0|QY581|4/4 | ⚠️ See 2
