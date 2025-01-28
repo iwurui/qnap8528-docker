@@ -1993,6 +1993,62 @@ static struct qnap8528_config qnap8528_configs[] = {
 		}
 	},
 	{
+		"TVS-951N", "SAN30", "SBN10",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_10g        = 0,
+			.led_usb        = 1,
+			.led_jbod       = 0,
+			.led_ident      = 1,
+			.enc_serial_mb  = 0,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd1", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd2", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd3", .ec_index = 8, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd4", .ec_index = 9, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
+		"TVS-951X", "Q0090", "Q00A0",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_10g        = 0,
+			.led_usb        = 1,
+			.led_jbod       = 0,
+			.led_ident      = 1,
+			.enc_serial_mb  = 0,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd1", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd2", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd3", .ec_index = 8, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd4", .ec_index = 9, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
 		"TVS-H674T", "B6491", "Q0BK0",
 		.features = {
 			.led_brightness = 1,
