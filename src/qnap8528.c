@@ -1244,7 +1244,7 @@ qnap8528_init_ret:
 
 MODULE_AUTHOR("0xGiddi <qnap8528@giddi.net>");
 MODULE_DESCRIPTION("QNAP IT8528 EC driver");
-MODULE_VERSION("1.5");
+MODULE_VERSION("1.6");
 MODULE_LICENSE("GPL");
 
 module_init(qnap8528_init);
