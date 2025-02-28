@@ -503,18 +503,18 @@ static struct qnap8528_config qnap8528_configs[] = {
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 10, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 11, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 12, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd7", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd8", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd9", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd10", .ec_index = 10, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd11", .ec_index = 11, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd12", .ec_index = 12, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ NULL }
 		}
 	},
@@ -529,18 +529,18 @@ static struct qnap8528_config qnap8528_configs[] = {
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 10, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 11, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 12, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd7", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd8", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd9", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd10", .ec_index = 10, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd11", .ec_index = 11, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd12", .ec_index = 12, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ NULL }
 		}
 	},
@@ -672,22 +672,22 @@ static struct qnap8528_config qnap8528_configs[] = {
 		},
 		.fans = (u8[]){ 1, 2, 3, 0},
 		.slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 10, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 11, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 12, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 13, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 14, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 15, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 16, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd7", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd8", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd9", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd10", .ec_index = 10, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd11", .ec_index = 11, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd12", .ec_index = 12, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd13", .ec_index = 13, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd14", .ec_index = 14, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd15", .ec_index = 15, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd16", .ec_index = 16, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ NULL }
 		}
 	},
@@ -1399,14 +1399,14 @@ static struct qnap8528_config qnap8528_configs[] = {
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd7", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd8", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ NULL }
 		}
 	},
@@ -1421,14 +1421,14 @@ static struct qnap8528_config qnap8528_configs[] = {
 		},
 		.fans = (u8[]){ 1, 2, 0},
 		.slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd7", .ec_index = 7, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd8", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ NULL }
 		}
 	},
@@ -1999,24 +1999,20 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.eup_mode       = 1,
 			.led_brightness = 1,
 			.led_status     = 1,
-			.led_10g        = 0,
 			.led_usb        = 1,
-			.led_jbod       = 0,
-			.led_ident      = 1,
-			.enc_serial_mb  = 0,
 			.vpd_bp_table   = 1,
 		},
 		.fans = (u8[]){ 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
-			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "ssd1", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "ssd2", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "ssd3", .ec_index = 8, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "ssd4", .ec_index = 9, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd3", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd4", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ NULL }
 		}
 	},
@@ -2027,24 +2023,20 @@ static struct qnap8528_config qnap8528_configs[] = {
 			.eup_mode       = 1,
 			.led_brightness = 1,
 			.led_status     = 1,
-			.led_10g        = 0,
 			.led_usb        = 1,
-			.led_jbod       = 0,
-			.led_ident      = 1,
-			.enc_serial_mb  = 0,
 			.vpd_bp_table   = 1,
 		},
 		.fans = (u8[]){ 1, 0},
 		.slots = (struct qnap8528_slot_config[]){
-			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "ssd1", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "ssd2", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "ssd3", .ec_index = 8, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "ssd4", .ec_index = 9, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd3", .ec_index = 8, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd4", .ec_index = 9, .has_present = 1, .has_error = 1, .has_locate = 1},
 			{ NULL }
 		}
 	},
@@ -2231,359 +2223,472 @@ static struct qnap8528_config qnap8528_configs[] = {
 			{ NULL }
 		}
 	},
-
-
-    {
-        "TS-1264U", "Q08R0", "Q08X0",
-        {
-            .eup_mode       = 1,
-            .led_status     = 1,
-            .led_jbod       = 1,
-            .led_ident      = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 2, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "hdd1", .ec_index = 1, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd2", .ec_index = 2, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd3", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd4", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd5", .ec_index = 5, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd6", .ec_index = 6, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd7", .ec_index = 7, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd8", .ec_index = 8, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd9", .ec_index = 9, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd10", .ec_index = 10, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd11", .ec_index = 11, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd12", .ec_index = 12, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
-    {
-        "TS-464U", "Q08S0", "QY740",
-        {
-            .eup_mode       = 1,
-            .led_status     = 1,
-            .led_ident      = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 2, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd3", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd4", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
-    {
-        "TS-864EU", "Q0AN0", "Q0AS0",
-        {
-            .led_status     = 1,
-            .led_jbod       = 1,
-            .led_ident      = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 2, 3, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "", .ec_index = 1, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 2, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 5, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 6, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 7, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 8, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
 	{
-        "TS-251D", "Q04W1", "QY570",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+		"TS-1264U", "Q08R0", "Q08X0",
+		{
+			.eup_mode       = 1,
+			.led_status     = 1,
+			.led_jbod       = 1,
+			.led_ident      = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 2, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd7", .ec_index = 7, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd8", .ec_index = 8, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd9", .ec_index = 9, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd10", .ec_index = 10, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd11", .ec_index = 11, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd12", .ec_index = 12, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{
-        "TS-253D", "Q05H0", "QY570",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+		"TS-464U", "Q08S0", "QY740",
+		{
+			.eup_mode       = 1,
+			.led_status     = 1,
+			.led_ident      = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 2, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{
-        "TS-451D", "SAO50", "SBK40",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
+		"TS-864EU", "Q0AN0", "Q0AS0",
+		{
+			.led_status     = 1,
+			.led_jbod       = 1,
+			.led_ident      = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 2, 3, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd7", .ec_index = 7, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd8", .ec_index = 8, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
+		"TS-251D", "Q04W1", "QY570",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
+		"TS-253D", "Q05H0", "QY570",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
+		"TS-451D", "SAO50", "SBK40",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
 			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+			{ NULL }
+		}
+	},
 	{
-        "TS-451D2", "SAO51", "SBK41",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
+		"TS-451D2", "SAO51", "SBK41",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
 			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+			{ NULL }
+		}
+	},
 	{
-        "TS-453D", "Q04M0", "QY581",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
-        {
-        "TS-686", "Q05S1", "Q0660",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .led_ident      = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 8, 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "m2ssd1", .ec_index = 9, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "m2ssd2", .ec_index = 10, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "ssd1", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "ssd2", .ec_index = 8, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
-        {
-        "TS-886", "Q05S1", "Q0650",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .led_ident      = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 8, 7, 1, 2, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "m2ssd1", .ec_index = 9, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "m2ssd2", .ec_index = 10, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "ssd1", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "ssd2", .ec_index = 8, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd5", .ec_index = 5, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd6", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+		"TS-453D", "Q04M0", "QY581",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+		{
+		"TS-686", "Q05S1", "Q0660",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.led_ident      = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 8, 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "m2ssd1", .ec_index = 9, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "m2ssd2", .ec_index = 10, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd1", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd2", .ec_index = 8, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+		{
+		"TS-886", "Q05S1", "Q0650",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.led_ident      = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 8, 7, 1, 2, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "m2ssd1", .ec_index = 9, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "m2ssd2", .ec_index = 10, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd1", .ec_index = 7, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "ssd2", .ec_index = 8, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{
-        "TS-653D", "Q04O0", "Q04N0",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 2, 0},
-        .slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 5, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+		"TS-653D", "Q04O0", "Q04N0",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 2, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 5, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{
-        "TS-ALTO4", "Q05X0", "Q06A0",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
-	        {
-        "TS-251A", "QX690", "QX710",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .led_ident      = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
-        {
-        "TS-451A", "QX690", "QX700",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-            .led_ident      = 1,
-            .vpd_bp_table   = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 3, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "", .ec_index = 4, .has_present = 1, .has_active = 0, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+		"TS-ALTO4", "Q05X0", "Q06A0",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+			{
+		"TS-251A", "QX690", "QX710",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.led_ident      = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+		{
+		"TS-451A", "QX690", "QX700",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.led_ident      = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	
+
 	{
-        "TS-453DMINI", "SAO40", "",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
-			{ .name = "", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+		"TS-253B", "QY470", "QY570",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{
-        "TBS-453DX", "QZ530", "",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-            .led_usb        = 1,
-        },
-        .fans = (u8[]){ 1, 0},
-        .slots = (struct qnap8528_slot_config[]){
+		"TS-253BE", "QY472", "QY570",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+		{
+		"TS-453B", "QZ060", "QZ070",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 2, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+		{
+		"TS-453BE", "QY472", "QY580",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
+		"TS-653B", "QY471", "QY590",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 2, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 6, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 5, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd5", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd6", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	/* Here add models without BP code */
+	{
+		"TS-453BMINI", "QY600", "",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+			.vpd_bp_table   = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
+		"TS-453DMINI", "SAO40", "",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "hdd1", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
+	{
+		"TBS-453DX", "QZ530", "",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+			.led_usb        = 1,
+		},
+		.fans = (u8[]){ 1, 0},
+		.slots = (struct qnap8528_slot_config[]){
 			{ .name = "m2ssd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "m2ssd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "m2ssd3", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "m2ssd4", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+			{ .name = "m2ssd3", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "m2ssd4", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{
-        "HS-453DX", "QZ290", "",
-        {
-            .pwr_recovery   = 1,
-            .eup_mode       = 1,
-            .led_brightness = 1,
-            .led_status     = 1,
-        },
-        .fans = NULL,
-        .slots = (struct qnap8528_slot_config[]){
+		"HS-453DX", "QZ290", "",
+		{
+			.pwr_recovery   = 1,
+			.eup_mode       = 1,
+			.led_brightness = 1,
+			.led_status     = 1,
+		},
+		.fans = NULL,
+		.slots = (struct qnap8528_slot_config[]){
 			{ .name = "m2ssd1", .ec_index = 1, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
 			{ .name = "m2ssd2", .ec_index = 2, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd1", .ec_index = 3, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-			{ .name = "hdd2", .ec_index = 4, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+			{ .name = "hdd1", .ec_index = 3, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 4, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{
-        "TS-464EU", "Q0930", "",
-        {
-            .eup_mode       = 1,
-            .led_status     = 1,
-            .led_jbod       = 1,
-        },
-        .fans = (u8[]){ 1, 2, 3, 0},
-        .slots = (struct qnap8528_slot_config[]){
-                        { .name = "m2ssd1", .ec_index = 5, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "m2ssd2", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd1", .ec_index = 1, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd2", .ec_index = 2, .has_present = 0, .has_active = 0, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-                        { .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
-            { NULL }
-        }
-    },
+		"TS-464EU", "Q0930", "",
+		{
+			.eup_mode       = 1,
+			.led_status     = 1,
+			.led_jbod       = 1,
+		},
+		.fans = (u8[]){ 1, 2, 3, 0},
+		.slots = (struct qnap8528_slot_config[]){
+			{ .name = "m2ssd1", .ec_index = 5, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "m2ssd2", .ec_index = 6, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd1", .ec_index = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd2", .ec_index = 2, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd3", .ec_index = 3, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ .name = "hdd4", .ec_index = 4, .has_present = 1, .has_active = 1, .has_error = 1, .has_locate = 1},
+			{ NULL }
+		}
+	},
 	{ NULL }
 };
