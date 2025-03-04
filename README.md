@@ -68,9 +68,9 @@ Before installing, please check the *Supported Models* table and see that your d
 4. Enter the `src` directory of the project `cd qnap8528-<version>/src`.
 5. Run `make`, **without `sudo`** (as `truenas_admin` or `root` if using local console)
 6. Check that the module compiled successfully with `echo $?` (should be `0`) and that the `qnap8528.ko` was created.
-7. Copy the kernel module to the Linux modules directory `cp qnap8528.ko /lib/modules/$(uname -r)/extra`
-8. Run `depmod -a` to updated the modules database.
-9. Module is installed and can be probed, follow [autoload-module-on-startup-with-systemd](#autoload-module-on-startup-with-systemd) to autoload on boot.
+7. Copy the kernel module to the Linux modules directory `sudo cp qnap8528.ko /lib/modules/$(uname -r)/extra`
+8. Run `sudo depmod -a` to updated the modules database.
+9. Module is installed and can be probed, follow [autoload-module-on-startup-with-systemd](#autoload-module-on-startup-with-systemd) to autoload on boot or manually probe using `modprobe qnap8528`.
 
 #### Uninstall procedure
 1. Unload the module using `modprobe -r qnap8528` or stopping the service created in previous step 9.
