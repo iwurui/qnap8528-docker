@@ -1,3 +1,166 @@
+QNAP8528 内核模块（容器化编译版）
+本项目基于 0xGiddi/qnap8528 二次开发，针对 NAS 系统普遍缺乏编译环境、追求系统纯净的用户，新增 Docker 容器化编译方案。通过映射 NAS 内核资源到容器，实现无侵入式驱动编译与安装，兼容原厂及第三方固件（如飞牛 OS）。经实测在 TS-453Bmini（飞牛 OS） 稳定运行，理论支持所有 Debian 系 Linux 环境。
+
+🚀 核心优势
+
+1. 容器化编译
+
+◦ 无需在 NAS 本地安装编译工具链，通过 Docker 隔离环境编译，避免污染系统。
+
+◦ 自动挂载 NAS 内核头文件，解决跨平台依赖问题。
+
+2. 一键式脚本
+
+◦ build.sh 脚本覆盖编译、安装、依赖刷新、驱动加载及开机自启全流程，减少手动操作风险。
+
+◦ 支持传递模块参数（如 skip_hw_check），适配特殊硬件型号。
+
+3. 系统洁癖友好
+
+◦ 仅向系统写入必要的驱动文件，支持轻松卸载，适合对系统修改敏感的场景。
+
+📦 前置准备
+
+1. NAS 环境要求
+
+• 系统支持：理论兼容所有 Debian 系系统（实测飞牛 OS，适配 QNAP 原厂固件、TrueNAS Scale 等）。
+
+• 内核头文件：确保 NAS 已安装对应内核的头文件（通常位于 /usr/src/linux-headers-<版本>），封闭系统需开启 开发者模式（如飞牛 OS 需启用 root 权限）。
+
+2. 编译主机要求
+
+• Docker 安装（以 Debian/Ubuntu 为例）：
+sudo apt update && sudo apt install docker.io  
+sudo systemctl enable --now docker  
+• 克隆仓库：
+git clone https://github.com/gzxiexl/qnap8528.git && cd qnap8528  
+🛠️ 容器化编译与安装步骤
+
+一、Dockerfile 环境说明
+
+基于轻量 Debian 镜像构建，预装编译工具链。
+
+二、build.sh 脚本用法
+
+1. 赋予脚本执行权限
+chmod +x build.sh  
+2. 以 root 权限运行脚本（推荐）
+sudo ./build.sh  
+• 脚本自动执行以下步骤：
+
+1. 启动 Docker 容器：挂载 NAS 内核头文件及当前目录。
+
+2. 编译驱动：在容器内生成适用于当前 NAS 内核的 qnap8528.ko。
+
+3. 安装驱动：将模块复制到 /lib/modules/$(uname -r)/extra/。
+
+4. 刷新依赖：执行 depmod -a 更新系统模块数据库。
+
+5. 加载驱动：通过 modprobe qnap8528 立即启用模块。
+
+6. 配置自启：创建 Systemd 服务，确保驱动开机自动加载。
+
+3. 特殊设备参数（按需添加）
+
+若设备为 TS-464/TS-253D 等使用非 ITE8528 芯片的型号，需跳过硬件检测：
+sudo ./build.sh skip_hw_check=true  
+三、手动干预（可选）
+
+1. 自定义内核头文件路径
+
+若内核头文件不在默认路径，可手动指定挂载路径（例如飞牛 OS 特殊路径）：
+sudo ./build.sh --kernel /path/to/nas_kernel_headers  
+2. 单独编译/安装
+
+• 仅编译：
+docker build -t qnap8528 . && docker run -v $(pwd):/qnap8528 qnap8528 make  
+• 仅安装（需提前生成 qnap8528.ko）：
+sudo cp src/qnap8528.ko /lib/modules/$(uname -r)/extra/  
+sudo depmod -a && sudo modprobe qnap8528  
+✅ 功能验证与使用
+
+1. 驱动加载确认
+# 检查模块是否加载  
+lsmod | grep qnap8528  
+# 预期输出：qnap8528 模块信息  
+
+# 查看 Systemd 服务状态  
+systemctl status qnap8528-load-module.service  
+# 状态应为 active (exited)  
+2. 基础功能测试
+
+（1）读取设备信息
+# 设备序列号（贴于机身的 SN）  
+cat /sys/devices/platform/qnap8528/vpd/enclosure_serial  
+# EC 固件版本  
+cat /sys/devices/platform/qnap8528/ec/fw_version  
+（2）LED 控制示例
+# 状态灯：0=关闭，1=绿色，2=红色  
+echo 1 | sudo tee /sys/class/leds/status/brightness  
+# 磁盘槽 1 指示灯（根据型号可能为 hdd1/ssd1 等）  
+echo 1 | sudo tee /sys/class/leds/hdd1/brightness  
+# 调节所有 LED 亮度（0-100）  
+echo 80 | sudo tee /sys/class/leds/panel_brightness  
+（3）风扇与温度监控
+# 查看温度传感器（hwmon 路径可能不同，需根据输出调整）  
+ls /sys/class/hwmon/hwmon*/temp*_input  
+# 示例：CPU 温度（temp0_input）  
+cat /sys/class/hwmon/hwmon0/temp0_input  
+
+# 风扇转速（RPM，fanX_input）与 PWM 控制（0-255）  
+cat /sys/class/hwmon/hwmon0/fan1_input  
+echo 200 | sudo tee /sys/class/hwmon/hwmon0/pwm1  
+📝 注意事项
+
+1. 内核版本匹配
+
+• 确保 NAS 当前运行的内核与编译时使用的内核头文件版本完全一致（通过 uname -r 确认），内核升级后需重新运行脚本。
+
+2. 封闭系统适配
+
+• 飞牛 OS/TrueNAS Scale：需通过开发者模式解锁 root 权限（如飞牛 OS 执行 sudo -i），系统更新会清除驱动，建议更新后重新安装。
+
+• 原厂固件：若提示权限不足，确认已启用 SSH 并获取管理员权限。
+
+3. 卸载方法
+# 停止服务并禁用自启  
+sudo systemctl disable --now qnap8528-load-module.service  
+# 卸载模块  
+sudo modprobe -r qnap8528  
+# 删除驱动文件（可选：恢复纯净系统）  
+sudo rm /lib/modules/$(uname -r)/extra/qnap8528.ko  
+sudo depmod -a  
+4. 日志排查
+
+若驱动加载失败，通过以下命令查看错误信息：
+dmesg | grep qnap8528  
+journalctl -u qnap8528-load-module.service  
+📚 原功能继承与扩展
+
+本项目完整保留原仓库所有特性，包括：
+
+• 硬件控制：风扇 PWM 调节、温度传感器读取、LED 状态管理（含磁盘槽指示灯）。
+
+• 系统接口：VPD 设备信息、EuP 电源模式、按钮输入（Reset/USB Copy 等）。
+
+• 兼容性：支持表格见原仓库 Supported Models，新增设备请参考原文档提交 Issue。
+
+🙌 贡献与反馈
+
+欢迎 Star/Fork 本项目！若遇兼容性问题或有优化建议：
+
+1. 提交 Issue：附上 NAS 型号、固件版本及 dmesg 日志。
+
+2. 代码贡献：通过 Pull Request 改进 Docker 脚本或设备适配逻辑。
+
+特别说明：本项目为第三方开发，与 QNAP 官方无关，使用前请备份数据，确保操作环境安全。
+
+作者：基于 0xGiddi 原项目，容器化改进 by gzxiexl
+维护：优先支持飞牛 OS 及 Debian 系 NAS 系统，其他场景请留言告知。
+协议：GPLv3 开源协议，允许自由修改与分发，但需保留原作者信息。
+
+......................
+
 - [Overview](#overview)
   - [Supported features](#supported-features)
 - [Installation Instructions](#installation-instructions)
