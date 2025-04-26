@@ -73,17 +73,17 @@ Before installing, please check the *Supported Models* table and see that your d
 8. Run `sudo depmod -a` to updated the modules database.
 9. Module is installed and can be probed, follow [autoload-module-on-startup-with-systemd](#autoload-module-on-startup-with-systemd) to autoload on boot or manually probe using `modprobe qnap8528`.
 
-### Installing on fnOS (Feiniu OS / 飞牛 OS)
+#### Uninstall procedure
+1. Unload the module using `modprobe -r qnap8528` or stopping the service created in previous step 9.
+2. Delete the module file `rm /lib/modules/$(uname -r)/extra/qnap8528.ko`
+3. Update modules database with `depmod -a`
 
+### Installing on fnOS (Feiniu OS / 飞牛 OS)
 **fnOS** is a lightweight operating system developed in China for small and embedded systems.  
 Because it is not possible to install the toolchain directly on the host machine, a Docker environment can be used to compile the module.  
 For more details on how to set this up (in chineese), see the repository by [gzxiexl](https://github.com/gzxiexl/qnap8528/).
 > Note: FnOS, the repository and code linked above in this section are not controlled by me and should be verified independently.
 
-#### Uninstall procedure
-1. Unload the module using `modprobe -r qnap8528` or stopping the service created in previous step 9.
-2. Delete the module file `rm /lib/modules/$(uname -r)/extra/qnap8528.ko`
-3. Update modules database with `depmod -a`
 
 ### Autoload module on startup with Systemd
 1. Create a new unit file `touch /etc/systemd/system/qnap8528-load-module.service`
