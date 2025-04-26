@@ -5,6 +5,7 @@
   - [Installing on TrueNAS Scale](#installing-on-truenas-scale)
     - [Install Procedure](#install-procedure)
     - [Uninstall procedure](#uninstall-procedure)
+  - [Installing on fnOS (Feiniu OS / 飞牛 OS)](#installing-on-fnos-feiniu-os--%E9%A3%9E%E7%89%9B-os)
   - [Autoload module on startup with Systemd](#autoload-module-on-startup-with-systemd)
   - [Removing the module](#removing-the-module)
 - [How to use this module](#how-to-use-this-module)
@@ -71,6 +72,13 @@ Before installing, please check the *Supported Models* table and see that your d
 7. Copy the kernel module to the Linux modules directory `sudo cp qnap8528.ko /lib/modules/$(uname -r)/extra`
 8. Run `sudo depmod -a` to updated the modules database.
 9. Module is installed and can be probed, follow [autoload-module-on-startup-with-systemd](#autoload-module-on-startup-with-systemd) to autoload on boot or manually probe using `modprobe qnap8528`.
+
+### Installing on fnOS (Feiniu OS / 飞牛 OS)
+
+**fnOS** is a lightweight operating system developed in China for small and embedded systems.  
+Because it is not possible to install the toolchain directly on the host machine, a Docker environment can be used to compile the module.  
+For more details on how to set this up (in chineese), see the repository by [gzxiexl](https://github.com/gzxiexl/qnap8528/).
+> Note: FnOS, the repository and code linked above in this section are not controlled by me and should be verified independently.
 
 #### Uninstall procedure
 1. Unload the module using `modprobe -r qnap8528` or stopping the service created in previous step 9.
@@ -351,7 +359,7 @@ TS-1264U|Q08R0|Q08X0|12/12 | ⚠️ See *2
 |TVS-951X|Q0090|Q00A0|9/9|✅ Tested
 |TS-451A|QX690|QX700|4/4 | ✅ Tested; thank you @kikakeule
 |TS-251A|QX690|QX710|2/2 |
-|TS-453BMINI|QY600|*N/A*|4/4 | ⚠️ See 2
+|TS-453BMINI|QY600|*N/A*|4/4 |✅ Tested; thank you @gzxiexl ⚠️ See 2
 |TS-453B|QZ060|QZ070|4/4 | ⚠️ See 2
 |TS-253BE|QY472|QY570|2/2 |
 |TS-453BE|QY472|QY580|4/4 | ⚠️ See 2
