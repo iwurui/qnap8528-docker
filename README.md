@@ -81,7 +81,7 @@ Before installing, please check the *Supported Models* table and see that your d
 ### Installing on fnOS (Feiniu OS / 飞牛 OS)
 **fnOS** is a lightweight operating system developed in China for small and embedded systems.  
 Because it is not possible to install the toolchain directly on the host machine, a Docker environment can be used to compile the module.  
-For more details on how to set this up (in chineese), see the repository by [gzxiexl](https://github.com/gzxiexl/qnap8528/).
+For more details on how to set this up (in chinese), see the repository by [gzxiexl](https://github.com/gzxiexl/qnap8528/).
 > Note: FnOS, the repository and code linked above in this section are not controlled by me and should be verified independently.
 
 
