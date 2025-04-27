@@ -59,7 +59,7 @@ sudo ./build.sh
    ```  
 2. **查看 Systemd 服务状态**：  
    ```bash  
-   systemctl status qnap8528-load-module.service  
+   systemctl status qnap8528-load.service 
    # 状态应为 `active (exited)`  
    ```  
 
