@@ -6,6 +6,7 @@
     - [Install Procedure](#install-procedure)
     - [Uninstall procedure](#uninstall-procedure)
   - [Installing on fnOS (Feiniu OS / 飞牛 OS)](#installing-on-fnos-feiniu-os--%E9%A3%9E%E7%89%9B-os)
+  - [Autoload module on startup with modprobe](#autoload-module-on-startup-with-modprobe)
   - [Autoload module on startup with Systemd](#autoload-module-on-startup-with-systemd)
   - [Removing the module](#removing-the-module)
 - [How to use this module](#how-to-use-this-module)
@@ -84,6 +85,10 @@ Because it is not possible to install the toolchain directly on the host machine
 For more details on how to set this up (in chinese), see the repository by [gzxiexl](https://github.com/gzxiexl/qnap8528/).
 > Note: FnOS, the repository and code linked above in this section are not controlled by me and should be verified independently.
 
+### Autoload module on startup with Modprobe
+1. Create the auto load file and content with `echo qnap8528 | sudo tee /etc/modules-load.d/qnap8528.conf`
+2. If load options are required, add them in an options file under `/etc/modprobe.d/qnap8528.conf` (example: `options qnap8528 skip_hw_check=true
+`)
 
 ### Autoload module on startup with Systemd
 1. Create a new unit file `touch /etc/systemd/system/qnap8528-load-module.service`
