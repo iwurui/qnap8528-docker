@@ -98,7 +98,7 @@ After=syslog.target network.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/sbin/modprobe $driver_name
+ExecStart=/bin/sh -c 'sleep 40 && modprobe $driver_name skip_hw_check=true && sleep 5 &&  sudo systemctl restart coolercontrold.service'
 ExecStop=/sbin/modprobe -r $driver_name
 
 [Install]
