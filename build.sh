@@ -92,14 +92,14 @@ install_driver() {
     # 配置 systemd 开机自启（替代旧的 /etc/modules-load.d 方式）
     cat <<EOF | sudo tee /etc/systemd/system/qnap8528-load.service >/dev/null
 [Unit]
-Description=Load qnap8528 Kernel Module
-After=syslog.target network.target
+Description=Load qnap8528 EC kernel module
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/bin/sh -c 'sleep 40 && modprobe $driver_name skip_hw_check=true && sleep 5 &&  sudo systemctl restart coolercontrold.service'
-ExecStop=/sbin/modprobe -r $driver_name
+# Add skip_hw_check=true at the end of the following line if required (such as on TS-464)
+ExecStart=/sbin/modprobe qnap8528 skip_hw_check=true
+ExecStop=/sbin/modprobe -r qnap8528
 
 [Install]
 WantedBy=multi-user.target
