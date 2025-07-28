@@ -86,7 +86,7 @@ install_driver() {
     sudo cp "$SOURCE_CODE_DIR"/*.ko "$MODULE_OUTPUT_DIR"
     sudo depmod -a
     local driver_name=$(basename "$SOURCE_CODE_DIR"/*.ko .ko)
-    sudo modprobe "$driver_name"
+    sudo modprobe "$driver_name" skip_hw_check=true
     echo "✅ 驱动 $driver_name 已加载"
     
     # 配置 systemd 开机自启（替代旧的 /etc/modules-load.d 方式）
