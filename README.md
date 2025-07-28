@@ -23,7 +23,7 @@
 2. **通过 SSH 登录 NAS**（需启用 SSH 服务）。  
 3. **克隆仓库**：  
    ```bash  
-   git clone https://github.com/gzxiexl/qnap8528.git && cd qnap8528  
+   git clone https://github.com/iwurui/qnap8528-docker.git && cd qnap8528-docker  
    ```  
 4. **赋予脚本执行权限**：  
    ```bash  
@@ -32,9 +32,9 @@
 
 
 ## 🛠️ 使用步骤  
-### 以 root 权限运行脚本（推荐）  
+### 以 root 权限运行脚本（跳过ITE 8528检测）  
 ```bash  
-sudo ./build.sh  
+sudo ./build.sh skip_hw_check=true  
 ```  
 
 ### 脚本自动执行流程  
